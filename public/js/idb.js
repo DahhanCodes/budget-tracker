@@ -42,7 +42,7 @@ function saveTrans() {
     //on success send indexDB's data to api
     getAll.onsuccess = function () {
         if (getAll.result.legnth > 0) {
-            $.post('/api/transaction/bulk', {
+            $.post("/api/transaction/bulk", {
                 body: JSON.stringify(getAll.result),
                 headers: {
                     Accept: 'application/json, text/plain, */*',
